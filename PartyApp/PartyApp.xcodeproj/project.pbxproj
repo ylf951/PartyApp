@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F52FD77F1DFB4F4E00F21FEC /* PartiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52FD77E1DFB4F4E00F21FEC /* PartiesTableViewController.swift */; };
+		F52FD7811DFB506E00F21FEC /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52FD7801DFB506E00F21FEC /* Persistance.swift */; };
+		F52FD7831DFB64B800F21FEC /* PartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52FD7821DFB64B800F21FEC /* PartyTableViewCell.swift */; };
+		F52FD7871DFB7E5200F21FEC /* AddPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52FD7861DFB7E5200F21FEC /* AddPartyViewController.swift */; };
+		F573CFC51DFA19B500712A2E /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573CFC41DFA19B500712A2E /* Party.swift */; };
+		F5D8022A1DFC8A8C00F1559C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D802291DFC8A8C00F1559C /* MapViewController.swift */; };
 		F5D9AEA21DEBD55C0048EBFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D9AEA11DEBD55C0048EBFA /* AppDelegate.swift */; };
-		F5D9AEA41DEBD55C0048EBFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D9AEA31DEBD55C0048EBFA /* ViewController.swift */; };
 		F5D9AEA71DEBD55C0048EBFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D9AEA51DEBD55C0048EBFA /* Main.storyboard */; };
 		F5D9AEA91DEBD55C0048EBFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D9AEA81DEBD55C0048EBFA /* Assets.xcassets */; };
 		F5D9AEAC1DEBD55C0048EBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D9AEAA1DEBD55C0048EBFA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F52FD77E1DFB4F4E00F21FEC /* PartiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartiesTableViewController.swift; sourceTree = "<group>"; };
+		F52FD7801DFB506E00F21FEC /* Persistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		F52FD7821DFB64B800F21FEC /* PartyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyTableViewCell.swift; sourceTree = "<group>"; };
+		F52FD7861DFB7E5200F21FEC /* AddPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPartyViewController.swift; sourceTree = "<group>"; };
+		F573CFC41DFA19B500712A2E /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		F5D802291DFC8A8C00F1559C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F5D9AE9E1DEBD55C0048EBFA /* PartyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D9AEA11DEBD55C0048EBFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5D9AEA31DEBD55C0048EBFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5D9AEA61DEBD55C0048EBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5D9AEA81DEBD55C0048EBFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D9AEAB1DEBD55C0048EBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F52FD7841DFB64C100F21FEC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F5D9AEAA1DEBD55C0048EBFA /* LaunchScreen.storyboard */,
+				F5D9AEA51DEBD55C0048EBFA /* Main.storyboard */,
+				F5D9AEA81DEBD55C0048EBFA /* Assets.xcassets */,
+				F52FD7821DFB64B800F21FEC /* PartyTableViewCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		F52FD7851DFB64DB00F21FEC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F52FD77E1DFB4F4E00F21FEC /* PartiesTableViewController.swift */,
+				F52FD7861DFB7E5200F21FEC /* AddPartyViewController.swift */,
+				F5D802291DFC8A8C00F1559C /* MapViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		F573CFC61DFA19B900712A2E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F573CFC41DFA19B500712A2E /* Party.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		F5D9AE951DEBD55C0048EBFA = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				F5D9AEA11DEBD55C0048EBFA /* AppDelegate.swift */,
-				F5D9AEA31DEBD55C0048EBFA /* ViewController.swift */,
-				F5D9AEA51DEBD55C0048EBFA /* Main.storyboard */,
-				F5D9AEA81DEBD55C0048EBFA /* Assets.xcassets */,
-				F5D9AEAA1DEBD55C0048EBFA /* LaunchScreen.storyboard */,
+				F52FD7801DFB506E00F21FEC /* Persistance.swift */,
 				F5D9AEAD1DEBD55C0048EBFA /* Info.plist */,
+				F52FD7851DFB64DB00F21FEC /* controller */,
+				F52FD7841DFB64C100F21FEC /* view */,
+				F573CFC61DFA19B900712A2E /* model */,
 			);
 			path = PartyApp;
 			sourceTree = "<group>";
@@ -91,11 +130,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Linfeng Yu";
 				TargetAttributes = {
 					F5D9AE9D1DEBD55C0048EBFA = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -135,8 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D9AEA41DEBD55C0048EBFA /* ViewController.swift in Sources */,
+				F52FD77F1DFB4F4E00F21FEC /* PartiesTableViewController.swift in Sources */,
+				F52FD7871DFB7E5200F21FEC /* AddPartyViewController.swift in Sources */,
+				F573CFC51DFA19B500712A2E /* Party.swift in Sources */,
+				F52FD7811DFB506E00F21FEC /* Persistance.swift in Sources */,
+				F52FD7831DFB64B800F21FEC /* PartyTableViewCell.swift in Sources */,
 				F5D9AEA21DEBD55C0048EBFA /* AppDelegate.swift in Sources */,
+				F5D8022A1DFC8A8C00F1559C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +220,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -198,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -219,8 +266,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -236,9 +285,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -251,6 +301,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ylf951.PartyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,6 +313,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ylf951.PartyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -284,6 +336,7 @@
 				F5D9AEB21DEBD55C0048EBFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
