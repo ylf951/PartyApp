@@ -19,22 +19,49 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> void in
-            if((error) != nil){
-                print("Error", error)
+        
+        // Do any additional setup after loading the view.
+        
+        geocoder.geocodeAddressString(address, completionHandler: { (placemarks, error) in
+            if error != nil {
+                print(error!)
+            }
+            if (placemarks?.count)! > 0 {
+                let placemark = placemarks?[0]
+                let location = placemark?.location
+                let coordinate = location?.coordinate
+                
+                print("\nlat: \(coordinate!.latitude), long: \(coordinate!.longitude)")
+                
+                
+                let initialLocation = CLLocation(latitude: coordinate!.latitude, longitude: coordinate!.longitude)
+                
+                self.centerMapOnLocation(location: initialLocation)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate!.latitude, longitude:coordinate!.longitude)
+                annotation.title = self.address
+                self.addPin(annotation: annotation)
             }
             
         })
         
         print(address)
-        // Do any additional setup after loading the view.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
         
     }
 
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let regionRadius: CLLocationDistance = 1000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    
+    func addPin(annotation: MKPointAnnotation) {
+        mapView.addAnnotation(annotation)
+    }
+    
 
     /*
     // MARK: - Navigation
