@@ -83,12 +83,6 @@ class PartiesTableViewController: UITableViewController {
     }
     
     
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     /*
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -105,7 +99,6 @@ class PartiesTableViewController: UITableViewController {
     
     
     // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     // Handle cell click event, use segue to envoke new ViewController and pass the party data in this particular cell
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
