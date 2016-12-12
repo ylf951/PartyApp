@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vKO-XD-FzB">
-                                <rect key="frame" x="27" y="211" width="320" height="216"/>
+                                <rect key="frame" x="28" y="211" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="503106100.85041499">
                                     <!--2016-12-10 23:41:40 +0000-->
                                 </date>

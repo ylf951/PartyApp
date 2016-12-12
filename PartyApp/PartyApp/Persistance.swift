@@ -12,6 +12,7 @@ class Persistance {
     
     let partiesKey = "party"
     
+    //Save party
     func saveParty(party: Party) {
         
         let userDefaults = UserDefaults.standard
@@ -25,6 +26,7 @@ class Persistance {
         
     }
     
+    //Delete party
     func deleteParty(index: Int) {
         let userDefaults = UserDefaults.standard
         var parties = fetchParties()
@@ -35,7 +37,7 @@ class Persistance {
         userDefaults.synchronize()
     }
     
-    
+    //Fetch parties
     func fetchParties() -> [Party] {
         let userDefaults = UserDefaults.standard
         let parties = userDefaults.object(forKey: partiesKey) as? Data

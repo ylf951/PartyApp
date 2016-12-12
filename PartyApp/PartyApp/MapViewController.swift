@@ -22,20 +22,14 @@ class MapViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        // Forward geocoding using Apple map built-in CLGeocoder
         geocoder.geocodeAddressString(address, completionHandler: { (placemarks, error) in
-            /*
-            if error != nil {
-                print(error!)
-            }
-             */
             if (placemarks?.count)! > 0 {
                 let placemark = placemarks?[0]
                 let location = placemark?.location
                 let coordinate = location?.coordinate
                 
-                print("\nlat: \(coordinate!.latitude), long: \(coordinate!.longitude)")
-                
-                
+                // Obtained location with latlong
                 let initialLocation = CLLocation(latitude: coordinate!.latitude, longitude: coordinate!.longitude)
                 
                 self.centerMapOnLocation(location: initialLocation)
@@ -47,19 +41,17 @@ class MapViewController: UIViewController {
             }
             
         })
-        
-        print(address)
-        
+    
     }
 
-    
+    // Make the location center in map and specify the rectangular region to display
     func centerMapOnLocation(location: CLLocation) {
         let regionRadius: CLLocationDistance = 1000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    
+    // Add a single pin to MKMapView
     func addPin(annotation: MKPointAnnotation) {
         mapView.addAnnotation(annotation)
     }
