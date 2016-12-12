@@ -10,9 +10,45 @@ import UIKit
 
 class AddPartyViewController: UIViewController {
 
-    @IBAction func savePartyButton(_ sender: UIButton) {
-        print("savePartyButton pressed")
+    
+    let persistance = Persistance()
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var addressTF: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func saveButton(_ sender: UIButton) {
+        
+        
+        let name = nameTF.text ?? ""
+        let address = addressTF.text ?? ""
+        if name == "" || address == ""{
+            let alertController = UIAlertController(title: "Warning", message: "Party name and address can not be blank!", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+        }
+        else {
+            let id = UUID().uuidString
+            let date = datePicker.date
+            
+            let party = Party(id: id, startDate: date, name: name, address: address)
+            persistance.saveParty(party: party)
+            
+            self.dismiss(animated: true, completion: nil)
+            
+        }
+   
+        
+        
+        
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

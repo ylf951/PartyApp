@@ -23,9 +23,11 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         geocoder.geocodeAddressString(address, completionHandler: { (placemarks, error) in
+            /*
             if error != nil {
                 print(error!)
             }
+             */
             if (placemarks?.count)! > 0 {
                 let placemark = placemarks?[0]
                 let location = placemark?.location

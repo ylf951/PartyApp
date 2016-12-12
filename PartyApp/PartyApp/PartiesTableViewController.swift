@@ -22,7 +22,7 @@ class PartiesTableViewController: UITableViewController {
         persistance.saveParty(party: party)
         */
         
-        parties = persistance.fetchParties()
+        //parties = persistance.fetchParties()
         
         
         print(parties.count)
@@ -31,6 +31,12 @@ class PartiesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        parties = persistance.fetchParties()
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
